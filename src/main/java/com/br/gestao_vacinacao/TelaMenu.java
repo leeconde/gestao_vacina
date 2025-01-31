@@ -51,7 +51,7 @@ public class TelaMenu extends JFrame {
         btVacina.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MenuVacina menuVacina = new MenuVacina(vacinaRepository);
+                MenuVacina menuVacina = new MenuVacina(vacinaRepository, fabricanteRepository);
                 menuVacina.setVisible(true);
             }
         });
