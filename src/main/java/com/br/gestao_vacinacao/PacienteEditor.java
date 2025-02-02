@@ -28,8 +28,8 @@ public class PacienteEditor extends JFrame {
     private Paciente paciente;
 
     public PacienteEditor(String operacao, PacienteRepository repository) {
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 

@@ -14,8 +14,8 @@ public class MenuFabricante extends JFrame {
     private JButton btVoltar;
 
     public MenuFabricante(FabricanteRepository fabricanteRepository) {
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 

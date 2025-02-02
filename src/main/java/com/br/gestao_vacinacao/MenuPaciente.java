@@ -15,8 +15,8 @@ public class MenuPaciente extends JFrame {
     private String operacao;
 
     public MenuPaciente(PacienteRepository pacienteRepository){
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 

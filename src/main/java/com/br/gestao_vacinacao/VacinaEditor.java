@@ -30,8 +30,8 @@ public class VacinaEditor extends JFrame {
     private Fabricante fabricante;
 
     public VacinaEditor(VacinaRepository vacinaRepository, FabricanteRepository fabricanteRepository) {
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 

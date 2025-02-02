@@ -21,8 +21,8 @@ public class FabricanteEditor extends JFrame {
     private Fabricante fabricante;
 
     public FabricanteEditor(String operacao, FabricanteRepository repository) {
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 

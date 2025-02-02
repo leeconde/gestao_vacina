@@ -3,6 +3,7 @@ package com.br.gestao_vacinacao;
 import com.br.gestao_vacinacao.repositorios.FabricanteRepository;
 import com.br.gestao_vacinacao.repositorios.PacienteRepository;
 import com.br.gestao_vacinacao.repositorios.VacinaRepository;
+import com.br.gestao_vacinacao.repositorios.VacinacaoRepository;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -17,9 +18,9 @@ public class TelaMenu extends JFrame {
     private JButton btVacina;
 
 
-    public TelaMenu(PacienteRepository pacienteRepository, FabricanteRepository fabricanteRepository, VacinaRepository vacinaRepository) {
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+    public TelaMenu(PacienteRepository pacienteRepository, FabricanteRepository fabricanteRepository, VacinaRepository vacinaRepository, VacinacaoRepository vacinacaoRepository) {
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 
@@ -43,7 +44,7 @@ public class TelaMenu extends JFrame {
         btVacinacao.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                MenuVacinacao menuVacinacao = new MenuVacinacao();
+                MenuVacinacao menuVacinacao = new MenuVacinacao(vacinacaoRepository, vacinaRepository, pacienteRepository);
                 menuVacinacao.setVisible(true);
             }
         });
@@ -53,6 +54,15 @@ public class TelaMenu extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 MenuVacina menuVacina = new MenuVacina(vacinaRepository, fabricanteRepository);
                 menuVacina.setVisible(true);
+            }
+        });
+
+
+        btRelatorio.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                MenuRelatorio menuRelatorio = new MenuRelatorio(vacinacaoRepository, pacienteRepository, fabricanteRepository, vacinaRepository);
+                menuRelatorio.setVisible(true);
             }
         });
     }

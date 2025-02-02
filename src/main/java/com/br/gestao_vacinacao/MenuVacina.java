@@ -11,10 +11,11 @@ public class MenuVacina extends JFrame {
     private JPanel contentPanel;
     private JButton btCadastrar;
     private JLabel lbTela;
+    private JButton btVoltar;
 
     public MenuVacina(VacinaRepository vacinaRepository, FabricanteRepository fabricanteRepository) {
-        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setContentPane(contentPanel);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 300);
         setLocationRelativeTo(null);
 
@@ -23,6 +24,13 @@ public class MenuVacina extends JFrame {
             public void actionPerformed(ActionEvent e) {
                 VacinaEditor vacinaEditor = new VacinaEditor(vacinaRepository, fabricanteRepository);
                 vacinaEditor.setVisible(true);
+            }
+        });
+
+        btVoltar.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                dispose();
             }
         });
 
